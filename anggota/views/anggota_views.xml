@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="anggota_tree" model="ir.ui.view">
+            <field name="name">anggota.tree</field>
+            <field name="model">koperasi.anggota</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="no_anggota" string="No"/>
+                    <field name="name" string="Nama"/>
+                    <field name="alamat" string="Alamat"/>
+                    <field name="birthday" string="Tanggal Lahir"/>
+                    <field name="place_of_birth" string="Tempat Lahir"/>
+                    <field name="umur" type="char" string="Umur"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="anggota_form" model="ir.ui.view">
+            <field name="name">anggota.form</field>
+            <field name="model">koperasi.anggota</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="no_anggota" string="No"/>
+                            <field name="name" string="Nama"/>
+                            <field name="alamat" string="Alamat"/>
+                            <field name="birthday" string="Tanggal Lahir"/>
+                            <field name="place_of_birth" string="Tempat Lahir"/>
+                            <field name="umur" type="char" string="Umur"/>
+                            <field name="ibu_kandung"/>
+                            <field name="kontak_darurat"/>
+                            <field name="telepon"/>
+                            <field name="hubungan"/>
+                            <field name="tanggal_daftar"/>
+                            <field name="email"/>
+                            <field name="mobile_no"/>
+                            <field name="bank_id"/>
+                            <field name="no_rek"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="anggota_action" model="ir.actions.act_window">
+            <field name="name">Anggota</field>
+            <field name="res_model">koperasi.anggota</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
