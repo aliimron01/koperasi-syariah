@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+admin_koperasi,admin.koperasi,model_koperasi_anggota,group_admin_koperasi,1,1,1,1
+

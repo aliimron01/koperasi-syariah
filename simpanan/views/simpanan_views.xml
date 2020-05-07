@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="penyetoran_simpanan_tree" model="ir.ui.view">
+            <field name="name">Tree Penyetoran Simpanan</field>
+            <field name="model">koperasi.penyetoran.simpanan</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <tree>
+
+                    <field name="name" string="Nama"/>
+                    <field name="account_id" string="Anggota"/>
+                    <field name="jenis_simpanan_id"/>
+                    <field name="nilai_simpanan"/>
+                    <field name="no_rek"/>
+                    <field name="bank_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="penyetoran_simpanan_form" model="ir.ui.view">
+            <field name="name">Form Penyetoran Simpanan</field>
+            <field name="model">koperasi.penyetoran.simpanan</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" string="Nama"/>
+                            <field name="account_id" string="Anggota"/>
+                            <field name="jenis_simpanan_id"/>
+                            <field name="nilai_simpanan"/>
+                            <field name="no_rek"/>
+                            <field name="bank_id"/>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+
+        <record id="action_penyetoran_simpanan" model="ir.actions.act_window">
+            <field name="name">Penyetoran Simpanan</field>
+            <field name="res_model">koperasi.penyetoran.simpanan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- PENGAMBILAN SIMPANAN -->
+
+        <record id="penyetoran_simpanan_tree" model="ir.ui.view">
+            <field name="name">Tree Pengambilan Simpanan</field>
+            <field name="model">koperasi.pengambilan.simpanan</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" string="Nama"/>
+                    <field name="account_id" string="Anggota"/>
+                    <field name="jenis_simpanan_id"/>
+                    <field name="nilai_simpanan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="penyetoran_simpanan_form" model="ir.ui.view">
+            <field name="name">Form Penyetoran Simpanan</field>
+            <field name="model">koperasi.penyetoran.simpanan</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" string="Nama"/>
+                            <field name="account_id" string="Anggota"/>
+                            <field name="jenis_simpanan_id"/>
+                            <field name="nilai_simpanan"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_pengambilan_simpanan" model="ir.actions.act_window">
+            <field name="name">Pengambilan Simpanan</field>
+            <field name="res_model">koperasi.pengambilan.simpanan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- JENIS SIMPANAN -->
+
+        <record id="jenis_simpanan_tree" model="ir.ui.view">
+            <field name="name">Jenis Simpanan Tree</field>
+            <field name="model">koperasi.jenis.simpanan</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="kode" />
+                    <field name="name" />
+                    <field name="keterangan" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="jenis_simpanan_form" model="ir.ui.view">
+            <field name="name">Jenis Simpanan Form</field>
+            <field name="model">koperasi.jenis.simpanan</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="kode" />
+                            <field name="name" />
+                            <field name="keterangan" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_jenis_simpanan" model="ir.actions.act_window">
+            <field name="name">Jenis Simpanan</field>
+            <field name="res_model">koperasi.jenis.simpanan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

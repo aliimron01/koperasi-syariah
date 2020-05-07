@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem
+            id="menu_simpanan"
+            name="Simpanan"
+            sequence="1"/>
+
+        <menuitem
+            id="menu_konfigurasi_simpanan"
+            name="Konfigurasi Simpanan"
+            parent="menu_simpanan"
+            sequence="5"/>
+
+        <menuitem
+            id="menu_jenis_simpanan"
+            name="Jenis Simpanan"
+            action="action_jenis_simpanan"
+            parent="menu_konfigurasi_simpanan"
+            sequence="1"/>
+
+        <menuitem
+            id="menu_penyetoran_simpanan"
+            name="Penyetoran"
+            action="action_penyetoran_simpanan"
+            parent="menu_simpanan"
+            sequence="1"/>
+
+        <menuitem
+            id="menu_pengambilan_simpanan"
+            name="Pengambilan"
+            action="action_pengambilan_simpanan"
+            parent="menu_simpanan"
+            sequence="2"/>
+
+    </data>
+</odoo>
