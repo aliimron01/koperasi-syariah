@@ -10,6 +10,19 @@ class KoperasiAnggota(models.Model):
     name = fields.Char('Nama', required=True)
     alamat = fields.Text(string="Alamat", required=True)
 
+    penyetoran_simpanan_ids = fields.One2many(
+        string="Penyetoran Simpanan",
+        comodel_name='koperasi.penyetoran.simpanan',
+        inverse_name='account_id'
+    )
+
+    pengambilan_simpanan_ids = fields.One2many(
+        string="Pengambilan Simpanan",
+        comodel_name='koperasi.pengambilan.simpanan',
+        inverse_name='account_id'
+    )
+
+
     gender = fields.Selection([
         ('male', 'Male'),
         ('female', 'Female')

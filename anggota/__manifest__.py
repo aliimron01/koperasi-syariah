@@ -13,7 +13,7 @@
     'maintainer': 'Sidiq Prabowo',
     'support': 'optimusbow@gmail.com',
     'website': '',
-    'depends': ['hr'],
+    'depends': ['simpanan'],
     'demo': [],
     'data': [
         'data/ir_sequence_data.xml',

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <menuitem
+            id="menu_pinjaman"
+            name="Pinjaman"
+            sequence="1"/>
+
+        <menuitem
+            id="menu_permohonan_pinjaman"
+            name="Permohonan"
+            action="action_permohonan_pinjaman"
+            parent="menu_pinjaman"
+            sequence="1"/>
+
+        <menuitem
+            id="menu_pembayaran_angsuran"
+            name="Pembayaran Angsuran"
+            action="action_pembayaran_angsuran"
+            parent="menu_pinjaman"
+            sequence="1"/>
+
+      <!--  <menuitem
+            id="menu_konfigurasi_pinjaman"
+            name="Konfigurasi Pinjaman"
+            parent="menu_pinjaman"
+            sequence="5"/>
+
+        <menuitem
+            id="menu_periode_pinjaman"
+            name="Periode Pinjaman"
+            action="action_jenis_pinjaman"
+            parent="menu_konfigurasi_pinjaman"
+            sequence="1"/>
+
+
+
+        <menuitem
+            id="menu_pembayaran_pinjaman"
+            name="Pembayaran"
+            action="action_pembayaran_pinjaman"
+            parent="menu_pinjaman"
+            sequence="2"/> -->
+
+    </data>
+</odoo>

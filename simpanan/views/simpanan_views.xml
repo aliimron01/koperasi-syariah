@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
         <record id="penyetoran_simpanan_tree" model="ir.ui.view">
             <field name="name">Tree Penyetoran Simpanan</field>
             <field name="model">koperasi.penyetoran.simpanan</field>
-            <field name="priority">10</field>
             <field name="arch" type="xml">
                 <tree>
-
                     <field name="name" string="Nama"/>
                     <field name="account_id" string="Anggota"/>
                     <field name="jenis_simpanan_id"/>
-                    <field name="nilai_simpanan"/>
+                    <field name="nilai_simpanan" sum="Total Simpanan"/>
                     <field name="no_rek"/>
                     <field name="bank_id"/>
                 </tree>
@@ -48,7 +47,7 @@
 
         <!-- PENGAMBILAN SIMPANAN -->
 
-        <record id="penyetoran_simpanan_tree" model="ir.ui.view">
+        <record id="pengambilan_simpanan_tree" model="ir.ui.view">
             <field name="name">Tree Pengambilan Simpanan</field>
             <field name="model">koperasi.pengambilan.simpanan</field>
             <field name="priority">10</field>
@@ -57,14 +56,14 @@
                     <field name="name" string="Nama"/>
                     <field name="account_id" string="Anggota"/>
                     <field name="jenis_simpanan_id"/>
-                    <field name="nilai_simpanan"/>
+                    <field name="total_simpanan" force_save="1" />
                 </tree>
             </field>
         </record>
 
-        <record id="penyetoran_simpanan_form" model="ir.ui.view">
-            <field name="name">Form Penyetoran Simpanan</field>
-            <field name="model">koperasi.penyetoran.simpanan</field>
+        <record id="pengambilan_simpanan_form" model="ir.ui.view">
+            <field name="name">Form Pengambilan Simpanan</field>
+            <field name="model">koperasi.pengambilan.simpanan</field>
             <field name="priority">10</field>
             <field name="arch" type="xml">
                 <form>
@@ -72,8 +71,8 @@
                         <group>
                             <field name="name" string="Nama"/>
                             <field name="account_id" string="Anggota"/>
-                            <field name="jenis_simpanan_id"/>
-                            <field name="nilai_simpanan"/>
+                            <field name="total_simpanan"/>
+                            <field name="jumlah_pengambilan"/>
                         </group>
                     </sheet>
                 </form>

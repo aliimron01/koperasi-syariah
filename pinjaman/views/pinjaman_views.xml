@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!-- permohonan pinjaman start -->
+    <record id="action_permohonan_pinjaman" model="ir.actions.act_window">
+        <field name="name">Permohonan Pinjaman</field>
+        <field name="res_model">permohonan.pinjaman</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="permohonan_pinjaman_tree" model="ir.ui.view">
+        <field name="name">Permohonan Pinjaman Tree</field>
+        <field name="model">permohonan.pinjaman</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="anggota_id"/>
+                <field name="periode_pinjaman"/>
+                <field name="nilai_pinjaman"/>
+                <field name="administrasi"/>
+                <field name="no_rek"/>
+                <field name="bank_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="permohonan_pinjaman_form" model="ir.ui.view">
+        <field name="name">Form Permohonan Pinjaman</field>
+        <field name="model">permohonan.pinjaman</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="anggota_id"/>
+                        <field name="periode_pinjaman"/>
+                        <field name="nilai_pinjaman"/>
+                        <field name="administrasi"/>
+                        <field name="no_rek"/>
+                        <field name="bank_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- permohonan pinjaman end -->
+
+    <!-- pembayaran angsuran start -->
+    <record id="action_pembayaran_angsuran" model="ir.actions.act_window">
+        <field name="name">Pembayaran Angsuran</field>
+        <field name="res_model">pembayaran.angsuran</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="pembayaran_angsuran_tree" model="ir.ui.view">
+        <field name="name">Pembayaran Angsuran Tree</field>
+        <field name="model">pembayaran.angsuran</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="anggota_id"/>
+                <field name="nominal_angsuran"/>
+                <field name="no_rek"/>
+                <field name="bank_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="permohonan_pembayaran_angsuran" model="ir.ui.view">
+        <field name="name">Form Pembayaran Angsuran</field>
+        <field name="model">pembayaran.angsuran</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="anggota_id"/>
+                        <field name="nominal_angsuran"/>
+                        <field name="no_rek"/>
+                        <field name="bank_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- pembayaran angsuran end -->
+
+
+    <!-- pembayaran pinjaman start -->
+    <!-- <record id="action_pembayaran_pinjaman" model="ir.actions.act_window">
+        <field name="name">Pembayaran Pinjaman</field>
+        <field name="res_model">koperasi.pembayaran.pinjaman</field>
+        <field name="view_mode">tree,form</field>
+    </record> -->
+    <!-- pembayaran pinjaman end -->
+
+    <!-- periode pinjaman start -->
+    <!-- <record id="action_periode_pinjaman" model="ir.actions.act_window">
+        <field name="name">Periode Pinjaman</field>
+        <field name="res_model">koperasi.periode.pinjaman</field>
+        <field name="view_mode">tree,form</field>
+    </record> -->
+    <!-- periode pinjaman end -->
+
+
+    </data>
+</odoo>
